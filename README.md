@@ -11,6 +11,12 @@ This lab standardizes the machine for corporate deployment. First, it renames th
 During the renaming phase inside the **Windows Virtual Machine (VM)** environment, executing the initial deployment cmdlet triggered a syntax pipeline block:
 `Cannot process command because of one or more missing mandatory parameters`.
 
+<img width="479" height="116" alt="lab 2" src="https://github.com/user-attachments/assets/01fbbfad-cb12-45d8-bca3-608bee536fde" />
+
+<img width="447" height="237" alt="lab 2 3" src="https://github.com/user-attachments/assets/11a84737-27aa-42d2-abed-b2f18b225174" />
+
+
+
 ### The Root Cause:
 If an administrator shell has string execution bugs, or if there is a minor syntax spacing discrepancy between the `-NewName` parameter switch and its string argument, PowerShell loses context. It registers the targeted name input as a blank value, throwing a missing mandatory parameter error.
 
